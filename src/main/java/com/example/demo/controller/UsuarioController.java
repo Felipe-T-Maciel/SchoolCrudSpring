@@ -48,8 +48,8 @@ public class UsuarioController {
     }
 
     @DeleteMapping
-    public void delete(@RequestParam Integer id){
-        usuarioService.delete(id);
+    public void delete(@RequestParam Integer id, @RequestParam Long cpf){
+        usuarioService.delete(id, cpf);
     }
 
     @GetMapping("/todos")
@@ -58,7 +58,7 @@ public class UsuarioController {
     }
 
     @GetMapping
-    public Usuario getOne(@RequestParam Integer id){
-        return usuarioService.pegaUm(id);
+    public Usuario getOne(@RequestParam Integer id, @RequestParam Long cpf){
+        return usuarioService.pegaUm(id, cpf);
     }
 }

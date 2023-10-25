@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @IdClass(UsuarioIDClass.class)
 public class Usuario {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private Integer id;
     @Id
     private Long cpf;
